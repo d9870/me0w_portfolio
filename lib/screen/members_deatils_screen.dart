@@ -12,25 +12,29 @@ class MemberDetailScreen extends StatelessWidget {
 
   int delayAmount = 200;
 
-  // Function to open a URL when the respective social media icon is tapped
-  void _launchURL(String url) async {
-    if (await canLaunch(url)) {
-      await launch(url);
+  void _launchURL(String host) async {
+    Uri url = Uri.parse(host);
+    if (await canLaunchUrl(url)) {
+      await launchUrl(url);
     } else {
       throw 'Could not launch $url';
     }
   }
 
   void _launchEmail(String email) async {
-    final Uri params = Uri(
+    final Uri emailLaunchUri = Uri(
       scheme: 'mailto',
       path: email,
     );
-    String url = params.toString();
-    if (await canLaunch(url)) {
-      await launch(url);
-    } else {
-      throw 'Could not launch $url';
+
+    try {
+      if (await canLaunchUrl(emailLaunchUri)) {
+        await launchUrl(emailLaunchUri);
+      } else {
+        throw 'Could not launch email';
+      }
+    } catch (e) {
+      throw 'Could not launch email';
     }
   }
 

@@ -32,7 +32,7 @@ List<Member> members = [
       email: "mauryasatyam79@gmail.com",
       phone: "7007821999",
       linkedIn: "https://www.linkedin.com/in/satyam-maurya-960747224/",
-      github: "https://www.github.com/satyammaurya20",
+      github: "https://github.com/esnoche/",
       image: "assets/images/satyam.jpg",
       techStack: "React, Node, Express, MongoDB, Core Java,AWS, chef"),
   Member(
@@ -40,7 +40,7 @@ List<Member> members = [
       email: "piyush69@gmail.com",
       phone: "1234567890",
       linkedIn: "https://www.linkedin.com/in/shubham-chavan-1a89a7209/",
-      github: "https://www.github.com/subhamchavan69",
+      github: "https://github.com/Piyush-linux",
       image: "assets/images/shubham.jpg",
       techStack: "React, vue , Express, MongoDB, tailwind css "),
 ];
